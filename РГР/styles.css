@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+section {
+    display: grid;
+}
+h2{
+    font-size: 1.25rem;
+    border-left: 6px solid red;
+    background: linear-gradient(90deg, rgba(0, 0, 20, 0.97), rgb(0, 0, 100), rgba(0, 0, 60, 0.97));
+    color: white;
+    padding: 5px;
+}
+.nav-list li{
+    display: inline;
+}
+.nav-container {
+    grid-template-areas: 
+    "nav-list nav-list"
+    "nav-pic nav-text";
+    grid-template-columns: 51% 49%;
+    gap: 1%;
+}
+.nav-pic{
+    grid-area: nav-pic;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    margin-top: 19px;
+}
+.nav-text{
+    padding-top: 15px;
+    grid-area: nav-text;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 22px;
+}
+.nav-text h2{
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    background: white;
+    color: blue;
+    border: 0 solid;
+}
+.nav-list {
+    grid-area: nav-list;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, rgba(0, 100, 200, 0.98), rgba(0, 150, 200, 0.98), rgba(0, 100, 200, 0.98));
+    color:white;
+    position: fixed;
+    width: 100%;
+}
+.nav-list ul {
+    list-style: none;
+    padding: 5px;
+    width: 100%;
+    display: flex;  
+    justify-content: space-evenly;  
+}
+.nav-list li {
+    padding-bottom: 5px;
+}
+.nav-list a{
+    padding: 10px;
+}
+.link{
+    text-decoration: none;
+    color: rgb(220, 220, 220);
+}
+.link:hover {
+    background-color:white;
+    color: darkgrey;
+    text-decoration: underline;
+}
+.main-container{
+    /*grid-template-areas: 
+    "left main main right";*/
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));  
+}
+.main-container div{
+    font-family: 'Franklin Gothic Medium';
+    font-size: 1.25rem;
+    padding: 15px;
+    text-align: justify;
+}
+.main-container h2{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.main{
+    grid-column: span 2;
+}
+.main ul{
+    list-style: none;
+    text-indent: 5px;
+    text-align: left;
+}
+.main ul li::before{
+    content: '- ';
+    text-indent: 5px;
+}
+.right ul{
+    list-style: none;
+    text-indent: 5px;
+    text-align: left;
+}
+.right ul li::before{
+    content: '- ';
+    text-indent: 5px;
+}
+.footer-container{
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10px; 
+    margin: auto 15px; 
+}
+.footer-container div{
+    font-size: 1rem;
+}
+.footer-container h2{
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-align: center;  
+}
+@media (min-width: 320px) and (max-width: 479.98px){
+    .nav-container{
+        grid-template-areas: 
+        "nav-list"
+        "nav-pic"
+        "nav-text";
+    }
+    .nav-list{
+        grid-area: nav-list;
+        grid-column: span 2;
+        font-size: 0.65rem;
+    }
+    .nav-pic{
+        grid-area: nav-pic;
+        grid-column: span 2;
+    }
+    .nav-text{
+        grid-area: nav-text;
+        grid-column: span 2;
+    }
+    .nav-list ul{
+        padding: 0;
+    }
+    .nav-list ul li {
+        width: 20%;
+        height: 30px;
+    }
+    .link:hover {
+        background-color:white;
+        color: ;
+        text-decoration: underline;
+    }
+}
+@media (min-width: 480px) and (max-width: 767.98px){
+
+}
+@media (min-width: 768px) and (max-width: 991.98px){
+
+}
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+}
