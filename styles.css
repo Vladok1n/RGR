@@ -19,14 +19,14 @@ h2{
     grid-template-areas: 
     "nav-list nav-list"
     "nav-pic nav-text";
-    grid-template-columns: 51% 49%;
+    grid-template-columns: 51% 47%;
     gap: 1%;
 }
 .nav-pic{
     grid-area: nav-pic;
     box-sizing: border-box;
     width: 100%;
-    padding: 15px;
+    padding: 15px 15px 15px 0px;
     margin-top: 19px;
     margin-top: 38px;
 }
@@ -39,23 +39,23 @@ h2{
 }
 .nav-text h2{
     padding-bottom: 10px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     background: white;
-    color: blue;
+    color:  blue;
     border: 0 solid;
+    -webkit-text-stroke: 0.5px black;
 }
 .nav-list {
     grid-area: nav-list;
     font-family: 'Franklin Gothic Medium';
     font-size: 1.5rem;
-    background: linear-gradient(90deg, rgba(0, 100, 200, 0.98), rgba(0, 150, 200, 0.98), rgba(0, 100, 200, 0.98));
+    background: linear-gradient(90deg, rgb(0, 100, 200), rgb(0, 150, 200), rgb(0, 100, 200));
     color:white;
     position: fixed;
     width: 100%;
 }
 .nav-list ul {
     list-style: none;
-    padding: 5px;
     width: 100%;
     display: flex;  
     justify-content: space-evenly;  
@@ -66,9 +66,12 @@ h2{
 .nav-list a{
     padding: 10px;
 }
+.notalink{
+    text-decoration: underline;
+}
 .link{
     text-decoration: none;
-    color: rgb(220, 220, 220);
+    color: rgb(180, 180, 180);
 }
 .link:hover {
     background-color:white;
@@ -114,10 +117,11 @@ h2{
 .footer-container{
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 10px; 
-    margin: auto 15px; 
+    background-color: lightgrey;
 }
 .footer-container div{
     font-size: 1rem;
+    padding: 15px 17px 0px;
 }
 .footer-container h2{
     font-size: 1rem;
