@@ -5,12 +5,19 @@
 section {
     display: grid;
 }
+p{
+    font-family: 'Times New Roman';
+}
+li{
+    font-family: 'Times New Roman';
+}
 h2{
     font-size: 1.25rem;
     border-left: 6px solid red;
     background: linear-gradient(90deg, rgba(0, 0, 20, 0.97), rgb(0, 0, 100), rgba(0, 0, 60, 0.97));
     color: white;
     padding: 5px;
+    font-family: 'Franklin Gothic Medium';
 }
 .nav-list li{
     display: inline-flex;
@@ -47,21 +54,22 @@ h2{
 }
 .nav-list {
     grid-area: nav-list;
-    font-family: 'Franklin Gothic Medium';
-    font-size: 1.5rem;
     background: linear-gradient(90deg, rgb(0, 100, 200), rgb(0, 150, 200), rgb(0, 100, 200));
-    color:white;
     position: fixed;
     width: 100%;
+}
+.nav-list li{
+    grid-area: nav-list;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 1.5rem;
+    color:white; 
+    padding-bottom: 5px;
 }
 .nav-list ul {
     list-style: none;
     width: 100%;
     display: flex;  
     justify-content: space-evenly;  
-}
-.nav-list li {
-    padding-bottom: 5px;
 }
 .nav-list a{
     padding: 10px;
@@ -75,7 +83,7 @@ h2{
 }
 .link:hover {
     background-color:white;
-    color: darkgrey;
+    color: black;
     text-decoration: underline;
 }
 .main-container{
@@ -84,8 +92,8 @@ h2{
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));  
 }
 .main-container div{
-    font-family: 'Franklin Gothic Medium';
     font-size: 1.25rem;
+    font-weight: 100;
     padding: 15px;
     text-align: justify;
 }
@@ -362,5 +370,22 @@ h2{
 @media (min-width: 615px) and (max-width: 767.98px){
     .nav-pic{
         margin-top: 38px;
+    }
+}
+@media (min-width: 1200px){
+    .main-container{
+        grid-template-areas: 
+        "left main right";
+        grid-template-columns: 24% 48% 24%;
+        justify-content: space-between;
+    }
+    .left{
+        grid-area: left;
+    }
+    .main{
+        grid-area: main;
+    }
+    .right{
+        grid-area:right;
     }
 }
