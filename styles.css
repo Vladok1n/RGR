@@ -202,9 +202,15 @@ h2{
     gap: 5px;
     flex-wrap: wrap;
 }
+.rocket h2{
+    text-align: center;
+}
 .rocket{
     width: 49vw;
     text-align: justify;
+}
+.rocket div{
+    padding-left: 5px;
 }
 .rocket-main{
     display: inline-flex;
@@ -228,6 +234,7 @@ h2{
     display: flex;
     color: rgb(100, 100, 100);
 }
+
 @media (min-width: 320px) and (max-width: 479.98px){
     h2{
         font-size: 1rem;
