@@ -77,6 +77,9 @@ h2{
 .notalink{
     text-decoration: underline;
 }
+.moon-pic{
+    width: 100%;
+}
 .link{
     text-decoration: none;
     color: rgb(180, 180, 180);
@@ -107,34 +110,123 @@ h2{
 .main ul{
     list-style: none;
     text-indent: 5px;
-    text-align: left;
-}
-.main ul li::before{
-    content: '- ';
-    text-indent: 5px;
+    text-align: justify;
 }
 .right ul{
-    list-style: none;
-    text-indent: 5px;
     text-align: left;
 }
-.right ul li::before{
-    content: '- ';
-    text-indent: 5px;
-}
-.footer-container{
+.additional-container{
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 10px; 
-    background-color: rgb(240, 240, 240);
 }
-.footer-container div{
+.additional-container div{
     font-size: 1rem;
     padding: 15px 17px 0px;
 }
-.footer-container h2{
+.additional-container h2{
     font-size: 1rem;
     margin-bottom: 5px;
     text-align: center;  
+}
+.footer-container{
+    background-color: rgb(225, 225, 225);
+}
+.qr{
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 20px;
+}
+.qr span{
+    text-decoration: none;
+}
+.number{
+    position: relative;
+    top: -120px;
+    text-align: center;
+    height: 20px;
+    align-content: space-between;
+}
+.githubref{
+    background: url(assets/github.png)no-repeat;
+    background-size: cover;
+    display: inline-flex;
+    position: relative;
+    left: 20px;
+    height: 100px;
+    width: 100px; 
+    text-decoration: none;
+    text-align: center;
+}
+.githubref span{
+    position: absolute;
+    top: 100px;
+    color: black;
+}
+.apple{
+    background: url(assets/mobile_qr-apple.png)no-repeat;
+    background-size: cover;
+    height: 100px;
+    left: 100px;
+    position: relative;
+    display: inline-flex;
+    width: 100px;
+    text-decoration: none;   
+    text-align: center;
+}
+.apple span{
+    position: absolute;
+    top: 100px;
+    color: black;
+}
+.google{
+    background: url(assets/mobile_qr-google.png)no-repeat;
+    background-size: cover;
+    height: 100px;
+    left: 120px;
+    position: relative;
+    display: inline-flex;
+    width: 100px;
+    text-decoration: none;
+    text-align: center;
+}
+.google span{
+    position: absolute;
+    top: 100px;
+    color: black;
+}
+.date{
+    text-align: center;
+}
+.rockets-container{
+    display: inline-flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.rocket{
+    width: 49vw;
+    text-align: justify;
+}
+.rocket-main{
+    display: inline-flex;
+}
+.rocket-main img{
+    margin: 5px 10px;
+}
+.rocket-main p{
+    margin: 5px 10px;
+    display: flex;
+    align-items: flex-start;
+    font-family: 'Times New Roman';
+    font-size: 1.1rem;
+}
+.mks-pic{
+    width: 100%;
+    margin-top: 15px;
+}
+.podpis{
+    justify-content: center;
+    display: flex;
+    color: rgb(100, 100, 100);
 }
 @media (min-width: 320px) and (max-width: 479.98px){
     h2{
@@ -152,7 +244,7 @@ h2{
         display: flex;
         grid-area: nav-list;
         grid-column: span 2;
-        font-size: 1.1rem;
+        width: 100vw;
     }
     .nav-list ul{
         padding: 0px;
@@ -160,6 +252,7 @@ h2{
     }
     .nav-list li a{
         text-align: center;
+        font-size: 1rem;
     }
     .nav-pic{
         grid-area: nav-pic;
@@ -179,19 +272,83 @@ h2{
     .main-container div{
         margin-top: 30px;
         padding: 0px;
-        margin: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        margin: 0px 5px;
         font-size: 1.1rem;
+        width: 100vw;
+        text-align: justify;
     }
-    .footer-container{
+    .main-container h2{
+        width: 70vw;
+    }
+    .left{
+        margin: auto 10px auto 10px;
+    }
+    .additional-container{
         margin: 10px;
         padding: 0px;
         font-size: 1.1rem;
     }
-    .footer-container h2{
+    .additional-container div{
+        padding: 0px;
+        width: 98vw;
+        text-align: justify;
+    }
+    .additional-container h2{
         text-align: left;
     }
     .link:hover {
         color: black;
+    }
+    .footer-container{
+        font-size: 0.95rem;
+    }
+    .qr{
+        width: 100vw;
+        position: relative;
+        top: 45px;
+        justify-content: space-around;
+    }
+    .githubref{
+        left: 0;
+        width: 75px;
+        height: 75px;
+    }
+    .apple{
+        left: 0;
+        width: 75px;
+        height: 75px;
+    }
+    .google{
+        left: 0;
+        width: 75px;
+        height: 75px;
+    }
+    .githubref span{
+        top: 75px;
+        width: 100px;
+    }
+    .apple span{
+        top: 75px;
+        width: 100px;
+    }
+    .google span{
+        top: 75px;
+        width: 100px;
+    }
+    .number{
+        top:-110px;
+    }
+    .rocket-main{
+        flex-wrap: wrap;
+    }
+    .rocket-main img{
+        width: 50%;
+        height: 50%;
+    }
+    .rocket{
+        width: 100vw;
     }
 }
 @media (min-width: 480px) and (max-width: 767.98px){
@@ -242,16 +399,57 @@ h2{
         grid-column: span 1;
         grid-row: span 2;
     }
-    .footer-container{
+    .additional-container{
         margin: 10px;
         padding: 0px;
         font-size: 1rem;
     }
-    .footer-container h2{
+    .additional-container h2{
         text-align: left;
     }
     .link:hover {
         color: black;
+    }
+    .qr{
+        width: 100vw;
+        position: relative;
+        top: 50px;
+        justify-content: space-around;
+    }
+    .githubref{
+        left: 0;
+    }
+    .apple{
+        left: 0;
+    }
+    .google{
+        left: 0;
+    }
+    .githubref span{
+        width: 100px;
+    }
+    .apple span{
+        width: 100px;
+    }
+    .google span{
+        width: 100px;
+    }
+    .number{
+        position: relative;
+        top: -130px;
+    }
+    .date{
+        margin-top: 10px;
+    }
+    .rocket-main{
+        flex-wrap: wrap;
+    }
+    .rocket-main img{
+        width: 50%;
+        height: 50%;
+    }
+    .rocket{
+        width: 100vw;
     }
 }
 @media (min-width: 768px) and (max-width: 991.98px){
@@ -294,16 +492,53 @@ h2{
         grid-column: span 1;
         grid-row: span 2;
     }
-    .footer-container{
+    .additional-container{
         margin: 10px;
         padding: 0px;
         font-size: 1rem;
     }
-    .footer-container h2{
+    .additional-container h2{
         text-align: left;
     }
     .link:hover {
         color: black;
+    }
+    .qr{
+        width: 100vw;
+        position: relative;
+        top: 60px;
+        justify-content: space-around;
+    }
+    .githubref{
+        left: 0;
+    }
+    .apple{
+        left: 0;
+    }
+    .google{
+        left: 0;
+    }
+    .githubref span{
+        width: 100px;
+    }
+    .apple span{
+        width: 100px;
+    }
+    .google span{
+        width: 100px;
+    }
+    .date{
+        margin-top: 20px;
+    }
+    .rocket-main{
+        flex-wrap: wrap;
+    }
+    .rocket-main img{
+        width: 50%;
+        height: 50%;
+    }
+    .rocket{
+        width: 100vw;
     }
 }
 @media (min-width: 992px) and (max-width: 1199.98px){
@@ -353,18 +588,49 @@ h2{
     .right{
         grid-column: span 3;
     }
-    .footer-container{
+    .additional-container{
         margin: 10px;
         padding: 0px;
         font-size: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 3px;
     }
-    .footer-container h2{
+    .additional-container h2{
         text-align: left;
     }
     .link:hover {
         color: black;
+    }
+    .qr{
+        width: 100vw;
+        position: relative;
+        top: 60px;
+        justify-content: space-around;
+    }
+    .githubref{
+        left: 0;
+    }
+    .apple{
+        left: 0;
+    }
+    .google{
+        left: 0;
+    }
+    .githubref span{
+        width: 100px;
+    }
+    .apple span{
+        width: 100px;
+    }
+    .google span{
+        width: 100px;
+    }
+    .date{
+        margin-top: 20px;
+    }
+    .rocket-main img{
+        width: 100%;
+        height: 100%;
     }
 }
 @media (min-width: 615px) and (max-width: 767.98px){
