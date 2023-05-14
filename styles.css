@@ -649,6 +649,7 @@ h2{
     .main-container{
         grid-template-areas: 
         "left main right";
+        padding-right: 5px;
         grid-template-columns: 24% 48% 24%;
         justify-content: space-between;
     }
