@@ -130,30 +130,29 @@ h2{
 }
 .footer-container{
     background-color: rgb(225, 225, 225);
-}
-.qr{
-    flex-wrap: wrap;
     display: flex;
-    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    min-height: 350px;
+}
+.qr {
+    display: flex;
+    justify-content: space-evenly;
 }
 .qr span{
     text-decoration: none;
 }
-.number{
-    position: relative;
-    top: -120px;
+.nums{
+    width: 100%;
     text-align: center;
-    height: 20px;
-    align-content: space-between;
+}
+.refCont {
+    width: 30%;
 }
 .githubref{
     background: url(assets/github.png)no-repeat;
     background-size: cover;
-    display: inline-flex;
-    position: relative;
-    left: 20px;
-    height: 100px;
-    width: 100px; 
     text-decoration: none;
     text-align: center;
 }
@@ -165,11 +164,6 @@ h2{
 .apple{
     background: url(assets/mobile_qr-apple.png)no-repeat;
     background-size: cover;
-    height: 100px;
-    left: 100px;
-    position: relative;
-    display: inline-flex;
-    width: 100px;
     text-decoration: none;   
     text-align: center;
 }
@@ -181,18 +175,22 @@ h2{
 .google{
     background: url(assets/mobile_qr-google.png)no-repeat;
     background-size: cover;
-    height: 100px;
-    left: 120px;
-    position: relative;
-    display: inline-flex;
-    width: 100px;
     text-decoration: none;
     text-align: center;
 }
-.google span{
-    position: absolute;
-    top: 100px;
+.google span, .apple span, .githubref span{
+    position: relative;
+    top: 200px;
     color: black;
+}
+.githubref, .apple, .google {
+    width: 200px;
+    height:200px;
+    display: block;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 40px;
+    margin-top: 20px;
 }
 .date{
     text-align: center;
@@ -224,10 +222,6 @@ h2{
     align-items: flex-start;
     font-family: 'Times New Roman';
     font-size: 1.1rem;
-}
-.mks-pic{
-    width: 100%;
-    margin-top: 15px;
 }
 .podpis{
     justify-content: center;
@@ -345,7 +339,7 @@ h2{
         width: 100px;
     }
     .number{
-        top:-110px;
+        top: 0px;
     }
     .rocket-main{
         flex-wrap: wrap;
@@ -356,6 +350,9 @@ h2{
     }
     .rocket{
         width: 100vw;
+    }
+    .google, .githubref, .apple{
+        background-size: cover;
     }
 }
 @media (min-width: 480px) and (max-width: 767.98px){
@@ -442,8 +439,7 @@ h2{
         width: 100px;
     }
     .number{
-        position: relative;
-        top: -130px;
+        position: static;
     }
     .date{
         margin-top: 10px;
@@ -457,6 +453,13 @@ h2{
     }
     .rocket{
         width: 100vw;
+    }
+    .google, .githubref, .apple{
+        margin-left: 10px;
+        margin-bottom: 0px;
+        height: 125px;
+        width: 125px;
+        background-size: cover;
     }
 }
 @media (min-width: 768px) and (max-width: 991.98px){
@@ -546,6 +549,9 @@ h2{
     }
     .rocket{
         width: 100vw;
+    }
+    .google, .githubref, .apple{
+        margin-left: 10px;
     }
 }
 @media (min-width: 992px) and (max-width: 1199.98px){
