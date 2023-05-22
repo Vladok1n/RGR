@@ -130,30 +130,29 @@ h2{
 }
 .footer-container{
     background-color: rgb(225, 225, 225);
-}
-.qr{
-    flex-wrap: wrap;
     display: flex;
-    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    min-height: 350px;
+}
+.qr {
+    display: flex;
+    justify-content: space-evenly;
 }
 .qr span{
     text-decoration: none;
 }
-.number{
-    position: relative;
-    top: -120px;
+.nums{
+    width: 100%;
     text-align: center;
-    height: 20px;
-    align-content: space-between;
+}
+.refCont {
+    width: 30%;
 }
 .githubref{
     background: url(assets/github.png)no-repeat;
     background-size: cover;
-    display: inline-flex;
-    position: relative;
-    left: 20px;
-    height: 100px;
-    width: 100px; 
     text-decoration: none;
     text-align: center;
 }
@@ -165,11 +164,6 @@ h2{
 .apple{
     background: url(assets/mobile_qr-apple.png)no-repeat;
     background-size: cover;
-    height: 100px;
-    left: 100px;
-    position: relative;
-    display: inline-flex;
-    width: 100px;
     text-decoration: none;   
     text-align: center;
 }
@@ -181,18 +175,22 @@ h2{
 .google{
     background: url(assets/mobile_qr-google.png)no-repeat;
     background-size: cover;
-    height: 100px;
-    left: 120px;
-    position: relative;
-    display: inline-flex;
-    width: 100px;
     text-decoration: none;
     text-align: center;
 }
-.google span{
-    position: absolute;
-    top: 100px;
+.google span, .apple span, .githubref span{
+    position: relative;
+    top: 200px;
     color: black;
+}
+.githubref, .apple, .google {
+    width: 200px;
+    height:200px;
+    display: block;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 40px;
+    margin-top: 20px;
 }
 .date{
     text-align: center;
