@@ -134,7 +134,10 @@ h2{
     flex-wrap: wrap;
     justify-content: center;
     height: auto;
-    min-height: 350px;
+    min-height: 250px;
+}
+.mks-pic{
+    width: 100%;
 }
 .qr {
     display: flex;
@@ -143,13 +146,6 @@ h2{
 .qr span{
     text-decoration: none;
 }
-.nums{
-    width: 100%;
-    text-align: center;
-}
-.refCont {
-    width: 30%;
-}
 .githubref{
     background: url(assets/github.png)no-repeat;
     background-size: cover;
@@ -157,33 +153,11 @@ h2{
     text-align: center;
 }
 .githubref span{
-    position: absolute;
-    top: 100px;
-    color: black;
-}
-.apple{
-    background: url(assets/mobile_qr-apple.png)no-repeat;
-    background-size: cover;
-    text-decoration: none;   
-    text-align: center;
-}
-.apple span{
-    position: absolute;
-    top: 100px;
-    color: black;
-}
-.google{
-    background: url(assets/mobile_qr-google.png)no-repeat;
-    background-size: cover;
-    text-decoration: none;
-    text-align: center;
-}
-.google span, .apple span, .githubref span{
     position: relative;
     top: 200px;
     color: black;
 }
-.githubref, .apple, .google {
+.githubref{
     width: 200px;
     height:200px;
     display: block;
@@ -275,13 +249,21 @@ h2{
         padding: 0px;
         margin-left: 0;
         margin-right: 0;
-        margin: 0px 5px;
+        margin: 0px;
         font-size: 1.1rem;
         width: 100vw;
         text-align: justify;
     }
     .main-container h2{
         width: 70vw;
+    }
+    .main-container p{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .main-container ul{
+        padding-left: 5px;
+        padding-right: 5px;
     }
     .left{
         margin: auto 10px auto 10px;
@@ -316,16 +298,6 @@ h2{
         width: 75px;
         height: 75px;
     }
-    .apple{
-        left: 0;
-        width: 75px;
-        height: 75px;
-    }
-    .google{
-        left: 0;
-        width: 75px;
-        height: 75px;
-    }
     .githubref span{
         top: 75px;
         width: 100px;
@@ -351,7 +323,7 @@ h2{
     .rocket{
         width: 100vw;
     }
-    .google, .githubref, .apple{
+    .githubref{
         background-size: cover;
     }
 }
@@ -423,19 +395,7 @@ h2{
     .githubref{
         left: 0;
     }
-    .apple{
-        left: 0;
-    }
-    .google{
-        left: 0;
-    }
     .githubref span{
-        width: 100px;
-    }
-    .apple span{
-        width: 100px;
-    }
-    .google span{
         width: 100px;
     }
     .number{
@@ -454,12 +414,21 @@ h2{
     .rocket{
         width: 100vw;
     }
-    .google, .githubref, .apple{
+    .githubref{
         margin-left: 10px;
         margin-bottom: 0px;
         height: 125px;
         width: 125px;
         background-size: cover;
+    }
+    .footer-container{
+        min-height: 200px;
+    }
+    .qr{
+        position: static;
+    }
+    .qr span{
+        top: 130px;
     }
 }
 @media (min-width: 768px) and (max-width: 991.98px){
@@ -499,8 +468,15 @@ h2{
         font-size: 1rem;
     }
     .main{
-        grid-column: span 1;
+        grid-column: span 2;
         grid-row: span 2;
+    }
+    .left{
+        grid-column: span 2;
+    }
+    .right{
+        display: grid;
+        grid-column: span 2;
     }
     .additional-container{
         margin: 10px;
@@ -522,19 +498,7 @@ h2{
     .githubref{
         left: 0;
     }
-    .apple{
-        left: 0;
-    }
-    .google{
-        left: 0;
-    }
     .githubref span{
-        width: 100px;
-    }
-    .apple span{
-        width: 100px;
-    }
-    .google span{
         width: 100px;
     }
     .date{
@@ -550,8 +514,11 @@ h2{
     .rocket{
         width: 100vw;
     }
-    .google, .githubref, .apple{
+    .githubref{
         margin-left: 10px;
+    }
+    .qr{
+        position: static;
     }
 }
 @media (min-width: 992px) and (max-width: 1199.98px){
@@ -623,19 +590,7 @@ h2{
     .githubref{
         left: 0;
     }
-    .apple{
-        left: 0;
-    }
-    .google{
-        left: 0;
-    }
     .githubref span{
-        width: 100px;
-    }
-    .apple span{
-        width: 100px;
-    }
-    .google span{
         width: 100px;
     }
     .date{
